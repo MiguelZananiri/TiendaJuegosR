@@ -1,0 +1,36 @@
+.boton-carrito {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    font-size: 18px;
+    background-color: #497e00;
+    color: white;
+    border: none;
+    border-radius: 6px;
+}
+
+.boton-carrito svg {
+    font-size: 24px;
+}
+
+.boton-carrito span {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.carrito {
+    position: absolute;
+    top: 100%;
+    right: 0%;
+    width: 500px;
+    padding: 15px;
+    background: black;
+    color: white;
+    border-radius: 8px;
+    z-index: 100;
+}
+
+.carrito th, .carrito td {
+    padding: 10px 20px 0px 0px;
+}

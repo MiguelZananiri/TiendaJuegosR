@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    --bs-body-color: white;
+
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to top, #660b1a, #3e135d);
+    font-family: Arial, Helvetica, sans-serif;
+}
