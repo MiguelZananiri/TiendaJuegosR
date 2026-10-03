@@ -85,7 +85,7 @@ function Productos({ juegos, setJuegos, carrito, setCarrito }) {
         const obtenerJuegos = async () => {
             try {
                 await new Promise((resolve) => setTimeout(resolve, 1000));
-                const response = await fetch("/juegos.json");
+                const response = await fetch(`${import.meta.env.BASE_URL}juegos.json`);
                 const data = await response.json();
 
                 setJuegos(data);
