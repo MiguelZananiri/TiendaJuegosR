@@ -7,7 +7,10 @@ import "./App.css"
 function App() {
 
     const [juegos, setJuegos] = useState([]);
-    const [carrito, setCarrito] = useState([]);
+    const [carrito, setCarrito] = useState(() => {
+        const carritoStorage = localStorage.getItem("carrito");
+        return carritoStorage ? JSON.parse(carritoStorage) : [];
+    });
 
     return (
         <>

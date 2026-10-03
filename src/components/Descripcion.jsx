@@ -5,6 +5,7 @@ function Descripcion ({ descripcion }) {
     const descripcionRef = useRef(null);
     const [toLeft, setToLeft] = useState(false);
 
+    // Comprobar si la descripcion se sale de la pantalla
     useEffect(() => {
         const elemento = descripcionRef.current;
 

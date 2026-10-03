@@ -6,26 +6,24 @@ function Carrito({ carrito, setCarrito, juegos }) {
     const [carritoVisible, setCarritoVisible] = useState(false);
     const hayProductos = carrito.length > 0;
 
+    // Filtrar juegos en el carrito
     const productosCarrito = juegos.filter(
         juego => carrito.includes(juego.id)
     );
 
+    // Remover juego del carrito
     const removerCarrito = (id) => {
-        console.log("ID a eliminar:", id, typeof id);
-        console.log("Carrito antes:", carrito);
-
         const actializarCarrito = carrito.filter(juego => Number(juego) !== Number(id));
-
-        console.log("Carrito después:", actializarCarrito);
 
         setCarrito(actializarCarrito);
 
         localStorage.setItem("carrito", JSON.stringify(actializarCarrito));
     };
 
+    // Remover todos los juegos del carrito
     const limpiarCarrito = () => {
-        setCarrito([]); // Limpiar el carrito en el estado
-        localStorage.removeItem("carrito"); // Eliminar el carrito del almacenamiento local
+        setCarrito([]);
+        localStorage.removeItem("carrito");
     };
 
     return (
